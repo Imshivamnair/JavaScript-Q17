@@ -29,3 +29,23 @@ console.log(range(2, 9));
 **Output:**
 
 [3,4,5,6,7,8]
+
+**Sample Solution-2:**
+// Function to get integers in the range (x, y) using recursion.
+function getRangeIntegers(x, y, result = []) {
+  // Base case: if x is equal to or greater than y, return the result.
+  if (x >= y - 1) {
+    return result;
+  } else {
+    // Recursive case: increment x and push it to the result array.
+    result.push(x + 1);
+    return getRangeIntegers(x + 1, y, result);
+  }
+}
+
+// Example usage: Get and print integers in the range (2, 9).
+console.log(getRangeIntegers(2, 9));
+
+**Output:**
+
+[3,4,5,6,7,8]
